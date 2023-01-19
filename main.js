@@ -14,12 +14,20 @@ const carritocompras = document.querySelector(".product-detail");
 // card container del section de los productos
 const cardscontainer = document.querySelector(".cards-container");
 
+// info del producto(bici)
+const biciinfo = document.querySelector(".detalle-producto");
+const clickbiciinfo = document.querySelector(".cards-container")
+
+
+
 
 email.addEventListener("click", menucorreo);
 
 iconmenumobile.addEventListener("click", iconocategorias);
 
 carritoicon.addEventListener("click", compras);
+
+clickbiciinfo.addEventListener("click", showdetalles);
 
 
 //funcion del menu del correo
@@ -43,6 +51,13 @@ function compras() {
     desktopmenu.classList.add("inactivo");
 }
 
+//detalles de la compra bici
+function showdetalles() {
+    biciinfo.classList.toggle("inactivo");
+    mobilemenu.classList.add("inactivo");
+    carritocompras.classList.add("inactivo");
+    desktopmenu.classList.add("inactivo");
+};
 
 
 const listadeproductos = [];
