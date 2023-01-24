@@ -62,6 +62,10 @@ function compras() {
 //aca creamos la funcion para la info pero no podemos cerrarla de nuevo con click
 function showdetalles() {
     biciinfo.classList.remove("inactivo");
+
+    mobilemenu.classList.add("inactivo");
+    carritocompras.classList.add("inactivo");
+    desktopmenu.classList.add("inactivo");
 }
 //creamos esta para poder cerrarla desde el icono de close agregandole la clase de inactivo de nuevo
 function cerrarinfobici() {
