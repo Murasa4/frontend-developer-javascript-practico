@@ -16,7 +16,10 @@ const cardscontainer = document.querySelector(".cards-container");
 
 // info del producto(bici)
 const biciinfo = document.querySelector(".detalle-producto");
-const clickbiciinfo = document.querySelector(".cards-container")
+const clickbiciinfo = document.querySelector(".cards-container");
+
+//info bici boton cerrar
+const iconclose = document.querySelector(".detalle-producto-close");
 
 
 
@@ -29,12 +32,15 @@ carritoicon.addEventListener("click", compras);
 
 clickbiciinfo.addEventListener("click", showdetalles);
 
+iconclose.addEventListener("click", cerrarinfobici)
+
 
 //funcion del menu del correo
 function menucorreo() {
     desktopmenu.classList.toggle("inactivo");
     mobilemenu.classList.add("inactivo");
     carritocompras.classList.add("inactivo");
+    biciinfo.classList.add("inactivo");
 };
 
 //funcion del icono del menu movil
@@ -42,6 +48,7 @@ function iconocategorias() {
     mobilemenu.classList.toggle("inactivo");
     carritocompras.classList.add("inactivo");
     desktopmenu.classList.add("inactivo");
+    biciinfo.classList.add("inactivo");
 };
 
 //funcion del icono del carrito
@@ -49,16 +56,20 @@ function compras() {
     carritocompras.classList.toggle("inactivo");
     mobilemenu.classList.add("inactivo");
     desktopmenu.classList.add("inactivo");
+    biciinfo.classList.add("inactivo");
 }
 
-//detalles de la compra bici
+//aca creamos la funcion para la info pero no podemos cerrarla de nuevo con click
 function showdetalles() {
+    biciinfo.classList.remove("inactivo");
+}
+//creamos esta para poder cerrarla desde el icono de close agregandole la clase de inactivo de nuevo
+function cerrarinfobici() {
     biciinfo.classList.toggle("inactivo");
     mobilemenu.classList.add("inactivo");
     carritocompras.classList.add("inactivo");
     desktopmenu.classList.add("inactivo");
-};
-
+}
 
 const listadeproductos = [];
 listadeproductos.push({
